@@ -1,9 +1,14 @@
+import { useState } from "react";
+import type { GardenTask } from "./types/GardenTask";
+
 function App() {
+  const [tasks, setTasks] = useState<GardenTask[]>([]);
+
   return (
-    <>
+    <div>
       <h1>PlanYourGarden 🌱</h1>
-      <p>Mein erstes Gartenplanungs-Projekt</p>
-    </>
+      <p>Aufgaben: {tasks.length}</p>
+    </div>
   );
 }
 
